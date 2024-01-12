@@ -8,7 +8,7 @@ except couchdb.http.PreconditionFailed as e:
     db = server[db_name]  # If the database already exists, use it
 #WRITE DATA
 data = {
-    'firstname': 'netaru',#Change values
+    'firstname': 'Toluwani',#Change values
     'email': 'net@a.com'
 }
 
@@ -19,7 +19,7 @@ print(doc)
 
 #UPDATE DATA
 doc = db.get(doc_id)
-doc['firstname'] = 'chinedu'#CHANGE VALUES
+doc['firstname'] = 'David'#CHANGE VALUES
 db.save(doc)
 
 #MODIFY DATA
@@ -28,7 +28,7 @@ def modify_data(doc_id, new_data):
     doc.update(new_data)
     db.save(doc)
 
-new_data = {'level': '400level'}#CHANGE VALUES
+new_data = {'level': '500level'}#CHANGE VALUES
 modify_data(doc_id, new_data)
 
 #DELETE A DOCUMENT
